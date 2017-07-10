@@ -1,8 +1,12 @@
+<%@ page import="java.util.Map" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <html>
 <head>
+    <%
+        int i = 0;
+    %>
     <link rel="stylesheet" href="http://www.bootcss.com/p/layoutit/css/bootstrap-combined.min.css">
 </head>
 <body>
@@ -30,8 +34,26 @@
 
                 <tbody>
                 <c:forEach var="employee" items="${list}">
-
-                    <tr class="success">
+                    <tr class="<%
+                    i++;
+                    switch (i%5){
+                        case 0:
+                            out.write("success");
+                            break;
+                        case 1:
+                            out.print("error");
+                            break;
+                        case 2:
+                            out.print("info");
+                            break;
+                         case 3:
+                         out.print("");
+                         break;
+                        default:
+                            out.print("warning");
+                            break;
+                    }
+                    %>">
                         <td>
                                 ${employee.empId}
                         </td>
