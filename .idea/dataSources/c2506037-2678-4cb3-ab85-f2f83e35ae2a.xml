@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="ssm@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.2">
+    <root id="1"/>
+    <schema id="2" parent="1" name="ssm">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="blog"/>
+    <schema id="4" parent="1" name="dang"/>
+    <schema id="5" parent="1" name="dangdang"/>
+    <schema id="6" parent="1" name="db_shopping"/>
+    <schema id="7" parent="1" name="information_schema"/>
+    <schema id="8" parent="1" name="mybatis"/>
+    <schema id="9" parent="1" name="mysql"/>
+    <schema id="10" parent="1" name="performance_schema"/>
+    <schema id="11" parent="1" name="stu"/>
+    <schema id="12" parent="1" name="sys"/>
+    <table id="13" parent="2" name="department"/>
+    <table id="14" parent="2" name="employee"/>
+    <table id="15" parent="2" name="table_ip"/>
+    <column id="16" parent="13" name="dep_id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="17" parent="13" name="dep_name">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <key id="18" parent="13" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>dep_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="19" parent="14" name="emp_id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="20" parent="14" name="emp_name">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="21" parent="14" name="gender">
+      <Position>3</Position>
+      <DataType>char(1)|0</DataType>
+    </column>
+    <column id="22" parent="14" name="email">
+      <Position>4</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="23" parent="14" name="dep_id">
+      <Position>5</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="24" parent="14" name="fk_dep_id">
+      <ColNames>dep_id</ColNames>
+    </index>
+    <key id="25" parent="14" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>emp_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="26" parent="14" name="fk_dep_id">
+      <ColNames>dep_id</ColNames>
+      <RefSchemaName>ssm</RefSchemaName>
+      <RefTableName>department</RefTableName>
+      <RefColNames>dep_id</RefColNames>
+    </foreign-key>
+    <column id="27" parent="15" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="28" parent="15" name="ip">
+      <Position>2</Position>
+      <DataType>varchar(15)|0</DataType>
+    </column>
+    <column id="29" parent="15" name="port">
+      <Position>3</Position>
+      <DataType>varchar(15)|0</DataType>
+    </column>
+    <column id="30" parent="15" name="country">
+      <Position>4</Position>
+      <DataType>varchar(15)|0</DataType>
+    </column>
+    <column id="31" parent="15" name="province">
+      <Position>5</Position>
+      <DataType>varchar(15)|0</DataType>
+    </column>
+    <column id="32" parent="15" name="city">
+      <Position>6</Position>
+      <DataType>varchar(15)|0</DataType>
+    </column>
+    <column id="33" parent="15" name="isp">
+      <Position>7</Position>
+      <DataType>varchar(15)|0</DataType>
+    </column>
+    <column id="34" parent="15" name="findTime">
+      <Position>8</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <key id="35" parent="15" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>
