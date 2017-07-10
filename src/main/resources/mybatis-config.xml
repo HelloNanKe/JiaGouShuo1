@@ -4,6 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 
 <configuration>
+
     <settings>
         <!-- 设置驼峰命名规则，会自动映射 first_name -> firstName -->
         <setting name="mapUnderscoreToCamelCase" value="true"/>

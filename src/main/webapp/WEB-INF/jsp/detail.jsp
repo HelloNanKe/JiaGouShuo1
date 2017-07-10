@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="http://www.bootcss.com/p/layoutit/css/bootstrap-combined.min.css">
 </head>
 <body>
-<h2>SSM</h2>
+<h2>基本信息列表</h2>
 <div class="container-fluid">
     <div class="row-fluid">
         <div class="span12">
@@ -70,6 +70,39 @@
                 </c:forEach>
                 </tbody>
             </table>
+        </div>
+    </div>
+</div>
+
+<%--分页组件--%>
+<div class="container-fluid">
+    <div class="row-fluid">
+        <div class="span12">
+            <div class="pagination pagination-right pagination-large">
+                <ul>
+                    <li>
+                        <a href="#">上一页</a>
+                    </li>
+                    <li>
+                        <a href="#">1</a>
+                    </li>
+                    <li>
+                        <a href="#">2</a>
+                    </li>
+                    <li>
+                        <a href="#">3</a>
+                    </li>
+                    <li>
+                        <a href="#">4</a>
+                    </li>
+                    <li>
+                        <a href="#">5</a>
+                    </li>
+                    <li>
+                        <a href="#">下一页</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 </div>
