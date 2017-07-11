@@ -8,6 +8,11 @@
     <name>JiaGouShuo Maven Webapp</name>
     <url>http://maven.apache.org</url>
 
+    <properties>
+        <spring.version>4.3.7.RELEASE</spring.version>
+        <mybatis.version>3.4.2</mybatis.version>
+    </properties>
+
     <!--引入项目依赖的jar包 -->
     <!-- SpringMVC、Spring -->
     <dependencies>
@@ -23,7 +28,7 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-test</artifactId>
-            <version>4.3.7.RELEASE</version>
+            <version>${spring.version}</version>
             <scope>test</scope>
         </dependency>
 
@@ -39,7 +44,7 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-webmvc</artifactId>
-            <version>4.3.7.RELEASE</version>
+            <version>${spring.version}</version>
         </dependency>
 
         <!-- 返回json字符串的支持 -->
@@ -65,21 +70,21 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-jdbc</artifactId>
-            <version>4.3.7.RELEASE</version>
+            <version>${spring.version}</version>
         </dependency>
         <!-- Spring面向切面编程 -->
         <!-- https://mvnrepository.com/artifact/org.springframework/spring-aspects-->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-aspects</artifactId>
-            <version>4.3.7.RELEASE</version>
+            <version>${spring.version}</version>
         </dependency>
         <!--MyBatis -->
         <!-- https://mvnrepository.com/artifact/org.mybatis/mybatis -->
         <dependency>
             <groupId>org.mybatis</groupId>
             <artifactId>mybatis</artifactId>
-            <version>3.4.2</version>
+            <version>${mybatis.version}</version>
         </dependency>
         <!-- MyBatis整合Spring的适配包 -->
         <!-- https://mvnrepository.com/artifact/org.mybatis/mybatis-spring -->
@@ -126,7 +131,7 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-test</artifactId>
-            <version>4.3.7.RELEASE</version>
+            <version>${spring.version}</version>
         </dependency>
     </dependencies>
 

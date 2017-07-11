@@ -9,7 +9,7 @@
 <html>
 <head>
     <title>ajax</title>
-
+    <script src="https://code.jquery.com/jquery-3.2.0.min.js"></script>
     <script type="text/javascript">
         function ajaxFunction( url) {
             alert("调用");
@@ -57,5 +57,27 @@
     这是一个盒子
 </div>
 
+
+<form id="contactForm1" action="/login" method="post">
+    <input type="text" name="name" value="123"/><br/>
+    <input type="text" name="pass" value="youschool"/><br/>
+    <input type="submit" value="提交"/>
+</form>
+${message}
+<script type="text/javascript">
+    var frm = $('#contactForm1');
+    frm.submit(function (ev) {
+        $.ajax({
+            type: frm.attr('method'),
+            url: frm.attr('action'),
+            data: frm.serialize(),
+            success: function (data) {
+                alert('ok');
+            }
+        });
+
+        ev.preventDefault();
+    });
+</script>
 </body>
 </html>
